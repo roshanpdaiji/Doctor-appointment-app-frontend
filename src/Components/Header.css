@@ -1,0 +1,43 @@
+/* Header.css */
+.header-container {
+    background-color: #3760a3; /* Blue background color */
+  }
+  
+
+  /* Header.css */
+
+/* Outer box with light background */
+.header-container {
+  background-color: #f0f4f8; /* Light background color */
+}
+
+/* Inner box with blue background */
+.header-inner-container {
+  background-color: #3760a3; /* Blue background color */
+}
+
+
+.book-appointment-btn {
+  display: flex;
+  align-items: center;
+  background-color:white; /* blue-600 */
+  border: 2px solid #eaecf2; /* blue-700 */
+  padding: 0.75rem 2rem; /* px-8 py-3 */
+  border-radius: 9999px; /* rounded-full */
+  color: rgb(19, 18, 18);
+  font-size: 0.875rem; /* text-sm */
+  margin-top: 1.5rem; /* mt-6 */
+  transition: all 0.3s ease;
+}
+
+.book-appointment-btn:hover {
+  background-color: #070707; /* blue-700 */
+  border-color: #090909; /* blue-800 */
+  color: white;
+}
+
+.arrow-icon {
+  width: 1rem; /* w-4 */
+  margin-left: 0.5rem; /* ml-2 */
+  transform: rotate(0deg);
+}
