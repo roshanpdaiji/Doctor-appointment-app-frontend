@@ -40,7 +40,7 @@ function Header() {
         <div className="w-full overflow-hidden">
   <img
     className="w-full h-auto max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded-lg shadow-xl m-5"
-    src="https://img.freepik.com/premium-photo/cartoon-diverse-group-healthcare-professionals_1031776-62243.jpg"
+    src="https://thumbs.dreamstime.com/b/your-health-fundamental-to-us-all-portrait-group-medical-practitioners-standing-together-hospital-254601548.jpg"
     alt="Doctors Group"
   />
 </div>

@@ -11,6 +11,9 @@ import Appointment from './Pages/Appointment';
 import MyProfile from './Pages/MyProfile';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar'; // Import your custom Navbar here, if you have one
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
       
       {/* Ensure some margin/padding to avoid content hiding under the Navbar */}
       <div className="main-content mx-4 sm:mx-[10%]">
+        <ToastContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

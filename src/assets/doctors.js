@@ -2,6 +2,7 @@ const doctors = [
   {
     _id: "doc1",
     name: "Dr. John Smith",
+    email: "johnsmith@example.com",
     image: "https://thumbs.dreamstime.com/b/doctor-portrait-21332357.jpg",
     speciality: "General Physician",
     degree: "MBBS, MD",
@@ -16,6 +17,7 @@ const doctors = [
   {
     _id: "doc2",
     name: "Dr. Emily Johnson",
+    email: "emilyjohnson@example.com",
     image: "https://img.freepik.com/premium-photo/doctor-man-adult-standing-straight-hospital-office_884296-298.jpg",
     speciality: "Pediatrician",
     degree: "MBBS, DM (Cardiology)",
@@ -30,6 +32,7 @@ const doctors = [
   {
     _id: "doc3",
     name: "Dr. Sarah Lee",
+    email: "sarahlee@example.com",
     image: "https://leman-clinic.ch/wp-content/uploads/2018/11/02.jpg",
     speciality: "Gastroenterologist",
     degree: "MBBS, MD (Gynecology)",
@@ -44,6 +47,7 @@ const doctors = [
   {
     _id: "doc4",
     name: "Dr. Irin Rose",
+    email: "irinrose@example.com",
     image: "https://th.bing.com/th/id/OIP.1IiGyLXtJ3o3nhZuhHrGkwHaIs?w=1157&h=1359&rs=1&pid=ImgDetMain",
     speciality: "Dermatologist",
     degree: "MBBS, MD (Dermatology)",
@@ -58,6 +62,7 @@ const doctors = [
   {
     _id: "doc5",
     name: "Dr. Laura Wilson",
+    email: "laurawilson@example.com",
     image: "https://th.bing.com/th/id/OIP.APjmKmC7pAwcvBCbKoxVmgHaGO?rs=1&pid=ImgDetMain",
     speciality: "Pediatrician",
     degree: "MBBS, MD (Pediatrics)",
@@ -72,6 +77,7 @@ const doctors = [
   {
     _id: "doc6",
     name: "Dr. David Miller",
+    email: "davidmiller@example.com",
     image: "https://img.freepik.com/premium-photo/man-white-coat-with-stethoscope-around-his-neck_1019429-341.jpg",
     speciality: "Neurologist",
     degree: "MBBS, DM (Neurology)",
@@ -86,6 +92,7 @@ const doctors = [
   {
     _id: "doc7",
     name: "Dr. Karen Davis",
+    email: "karendavis@example.com",
     image: "https://th.bing.com/th/id/OIP.T5UJ-EhdGnpuYcwfWYLWKAHaHa?w=626&h=626&rs=1&pid=ImgDetMain",
     speciality: "Neurologist",
     degree: "MBBS, MS (Orthopedics)",
@@ -100,6 +107,7 @@ const doctors = [
   {
     _id: "doc8",
     name: "Dr. Robert Martinez",
+    email: "robertmartinez@example.com",
     image: "https://img.freepik.com/premium-photo/photo-young-handsome-doctor-white-background_987842-3600.jpg",
     speciality: "Gynecologist",
     degree: "MBBS, MS (ENT)",
@@ -114,6 +122,7 @@ const doctors = [
   {
     _id: "doc9",
     name: "Dr. Susan Taylor",
+    email: "susantaylor@example.com",
     image: "https://th.bing.com/th/id/R.0ce105e1aa5fed1cd7c15b5a59b2c34f?rik=9w0%2f8qXbLn707w&riu=http%3a%2f%2fquickdevs.com%2ftemplates%2fdenteur%2fimg%2fimages%2fimg38.jpg&ehk=0Zc3s0msqo6OTBDpzdeodi6bwGftIR3nhLWWZAuudfc%3d&risl=&pid=ImgRaw&r=0",
     speciality: "General Physician",
     degree: "MBBS, MD (Psychiatry)",
@@ -128,6 +137,7 @@ const doctors = [
   {
     _id: "doc10",
     name: "Dr. James Anderson",
+    email: "jamesanderson@example.com",
     image: "https://img.freepik.com/premium-photo/photo-handsome-young-doctor-wearing-uniform-white-background_987842-3225.jpg",
     speciality: "Gynecologist",
     degree: "MBBS, MS (Ophthalmology)",

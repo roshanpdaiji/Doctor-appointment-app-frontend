@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
+import { AppContext } from '../context/AppContext';
 
 function Navbar() {
   const navigate = useNavigate();
+  const { token, setToken, userData } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
-  const [token, setToken] = useState(true);
+
+  const logout = () => {
+    setToken(false);
+    localStorage.removeItem('token');
+  };
 
   return (
     <div className="navbar-container container-fluid">
@@ -37,26 +43,40 @@ function Navbar() {
       <div className="flex items-center gap-4">
         {token ? (
           <div className="flex items-center gap-2 cursor-pointer group relative">
-            <img
-              className="rounded-full w-8"
-              src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg"
-              alt=""
-            />
+            {userData && userData.image ? (
+              <img
+                className="rounded-full w-8"
+                src={userData.image}
+                alt="User Avatar"
+              />
+            ) : (
+              <img
+                className="rounded-full w-8"
+                src="https://via.placeholder.com/150"
+                alt="Default Avatar"
+              />
+            )}
             <img
               className="w-5 h-5"
               src="https://icon-library.com/images/dropdown-icon/dropdown-icon-14.jpg"
-              alt=""
+              alt="Dropdown Icon"
             />
 
             <div className="absolute top-0 right pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
               <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
-                <p onClick={() => navigate('/my-profile')} className="hover:text-black cursor-pointer">
+                <p
+                  onClick={() => navigate('/my-profile')}
+                  className="hover:text-black cursor-pointer"
+                >
                   My Profile
                 </p>
-                <p onClick={() => navigate('/my-appointments')} className="hover:text-black cursor-pointer">
+                <p
+                  onClick={() => navigate('/my-appointments')}
+                  className="hover:text-black cursor-pointer"
+                >
                   My Appointments
                 </p>
-                <p onClick={() => setToken(false)} className="hover:text-black cursor-pointer">
+                <p onClick={logout} className="hover:text-black cursor-pointer">
                   Logout
                 </p>
               </div>
@@ -97,39 +117,38 @@ function Navbar() {
             />
           </div>
           <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
-          <NavLink 
-  to="/home" 
-  onClick={() => setShowMenu(false)} 
-  className="px-4 py-2 rounded inline-block hover:bg-gray-200"
->
-  <p className="text-black">HOME</p>
-</NavLink>
+            <NavLink
+              to="/home"
+              onClick={() => setShowMenu(false)}
+              className="px-4 py-2 rounded inline-block hover:bg-gray-200"
+            >
+              <p className="text-black">HOME</p>
+            </NavLink>
 
-<NavLink 
-  to="/doctors" 
-  onClick={() => setShowMenu(false)} 
-  className="px-4 py-2 rounded inline-block hover:bg-gray-200"
->
-  <p className="text-black">ALL DOCTORS</p>
-</NavLink>
+            <NavLink
+              to="/doctors"
+              onClick={() => setShowMenu(false)}
+              className="px-4 py-2 rounded inline-block hover:bg-gray-200"
+            >
+              <p className="text-black">ALL DOCTORS</p>
+            </NavLink>
 
-<NavLink 
-  to="/about" 
-  onClick={() => setShowMenu(false)} 
-  className="px-4 py-2 rounded inline-block hover:bg-gray-200"
->
-  <p className="text-black">ABOUT</p>
-</NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => setShowMenu(false)}
+              className="px-4 py-2 rounded inline-block hover:bg-gray-200"
+            >
+              <p className="text-black">ABOUT</p>
+            </NavLink>
 
-<NavLink 
-  to="/contact" 
-  onClick={() => setShowMenu(false)} 
-  className="px-4 py-2 rounded inline-block hover:bg-gray-200"
->
-  <p className="text-black">CONTACT</p>
-</NavLink>
-
-</ul>
+            <NavLink
+              to="/contact"
+              onClick={() => setShowMenu(false)}
+              className="px-4 py-2 rounded inline-block hover:bg-gray-200"
+            >
+              <p className="text-black">CONTACT</p>
+            </NavLink>
+          </ul>
         </div>
       </div>
     </div>

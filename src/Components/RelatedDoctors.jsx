@@ -64,10 +64,13 @@ useEffect(()=>{
       </div>
 
       <button 
-        onClick={() => navigate('/doctors')} 
-        className='bg-blue-50 text-gray-600 px-12 py-3 rounded-full mt-10'>
-        More
-      </button>
+  onClick={() => navigate('/doctors')} 
+  className='bg-blue-500 text-white px-12 py-3 rounded-full mt-10 mb-4 hover:bg-blue-600 transition-all duration-300 shadow-lg'>
+  More
+</button>
+
+
+
     </div>
 
 
