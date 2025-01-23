@@ -28,10 +28,15 @@ function TopDoctors() {
               className="w-full h-[300px] object-cover bg-blue-50"
             />
             <div className="p-4">
-              <div className="doctor-availability flex items-center gap-2 text-sm text-green-500">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <p>Available</p>
-              </div>
+            <div className="doctor-availability flex items-center gap-2 text-sm">
+  <span 
+    className={`w-2 h-2 rounded-full ${item.available ? 'bg-green-500' : 'bg-red-500'}`} 
+  ></span>
+  <p style={{ color: item.available ? 'green' : 'red' }}>
+    {item.available ? 'Available' : 'Not Available'}
+  </p>
+</div>
+
               <p className="doctor-name text-lg font-semibold text-gray-800 mt-2">{item.name}</p>
               <p className="doctor-speciality text-sm text-gray-600">{item.speciality}</p>
             </div>
