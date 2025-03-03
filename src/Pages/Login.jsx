@@ -59,7 +59,6 @@ function Login() {
       navigate('/')
     }
   },[token])
-  
 
   return (
     <>
